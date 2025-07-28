@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Argiopa Labs</title>
+    <link>https://argiopa-labs.fr/posts/</link>
+    <description>Recent content in Posts on Argiopa Labs</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 27 Jul 2025 18:51:55 +0200</lastBuildDate>
+    <atom:link href="https://argiopa-labs.fr/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Abusing custom CWMP XML parsing to achieve RCE</title>
+      <link>https://argiopa-labs.fr/posts/abusing_cwmp_xml_parsing/</link>
+      <pubDate>Sun, 27 Jul 2025 18:51:55 +0200</pubDate>
+      <guid>https://argiopa-labs.fr/posts/abusing_cwmp_xml_parsing/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Parallèlement à mon activité principale, j&amp;rsquo;ai récemment entrepris en side project de chercher des vulnérabilités sur une gamme de routeurs grand public. Il s&amp;rsquo;avère que lors du mapping de la surface d&amp;rsquo;attaque, j&amp;rsquo;ai découvert une implémentation customisée du protocole CWMP (CPE WAN Management Protocol). En effet, contrairement à une implementation standard de la stack TR-069, ces appareils avaient leur propre service CWMP dans /usr/bin/cwmp avec une shared library libcwmp.so .&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
