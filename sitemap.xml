@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>www.argiopa-labs.fr/posts/abusing_cwmp_xml_parsing/</loc>
+    <loc>http://www.argiopa-labs.fr/posts/abusing_cwmp_xml_parsing/</loc>
     <lastmod>2025-07-27T18:51:55+02:00</lastmod>
   </url><url>
-    <loc>www.argiopa-labs.fr/</loc>
+    <loc>http://www.argiopa-labs.fr/</loc>
     <lastmod>2025-07-27T18:51:55+02:00</lastmod>
   </url><url>
-    <loc>www.argiopa-labs.fr/posts/</loc>
+    <loc>http://www.argiopa-labs.fr/posts/</loc>
     <lastmod>2025-07-27T18:51:55+02:00</lastmod>
   </url><url>
-    <loc>www.argiopa-labs.fr/categories/</loc>
+    <loc>http://www.argiopa-labs.fr/categories/</loc>
   </url><url>
-    <loc>www.argiopa-labs.fr/tags/</loc>
+    <loc>http://www.argiopa-labs.fr/tags/</loc>
   </url>
 </urlset>

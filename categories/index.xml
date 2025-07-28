@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Argiopa Labs</title>
-    <link>www.argiopa-labs.fr/categories/</link>
+    <link>http://www.argiopa-labs.fr/categories/</link>
     <description>Recent content in Categories on Argiopa Labs</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="www.argiopa-labs.fr/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.argiopa-labs.fr/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
