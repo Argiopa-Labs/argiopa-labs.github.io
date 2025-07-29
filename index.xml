@@ -15,12 +15,5 @@
       <guid>https://www.argiopa-labs.fr/posts/abusing_cwmp_xml_parsing/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Parallèlement à mon activité principale, j&amp;rsquo;ai récemment entrepris en side project de chercher des vulnérabilités sur une gamme de routeurs grand public. Il s&amp;rsquo;avère que lors du mapping de la surface d&amp;rsquo;attaque, j&amp;rsquo;ai découvert une implémentation customisée du protocole CWMP (CPE WAN Management Protocol). En effet, contrairement à une implementation standard de la stack TR-069, ces appareils avaient leur propre service CWMP dans /usr/bin/cwmp avec une shared library libcwmp.so .&lt;/p&gt;</description>
     </item>
-    <item>
-      <title>About</title>
-      <link>https://www.argiopa-labs.fr/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.argiopa-labs.fr/about/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>
